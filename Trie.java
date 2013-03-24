@@ -12,13 +12,15 @@ public class Trie {
 
   public static void main(String args[]) {
   Trie trie = new Trie(new TrieNode(' '), 1);  
-  trie.insert("Hello");
+  trie.insert("Mohit");
   trie.insert("Hi");
   trie.insert("Hill");
   trie.insert("Heel");
   trie.insert("Hell");
+  trie.insert("9666670664");
   System.out.println(trie.search("Hell"));
   trie.delete("Hell");
+  System.out.println(trie.search("Hell"));
   System.out.println(trie.search("Hell"));
  }
 
@@ -126,7 +128,7 @@ public class Trie {
 
 class TrieNode implements Comparable{
  char data;
- int leaf;
+ String associatedInfo;
  Set children;
 
   TrieNode (char data){
